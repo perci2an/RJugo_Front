@@ -9,7 +9,7 @@ const BannerCard = ({ title, label, bgColor }) => {
       <strong className="relative block my-[25px] mb-[35px] pb-[250px] font-bold text-[2rem] text-white">
         {title}
       </strong>
-      <button className="block w-[300px] h-[65px] leading-[65px] text-[1.3rem] bg-white/10 text-white rounded-[15px]">
+      <button className="block w-[300px] h-[65px] leading-[65px] text-[1.3rem] bg-white/10 text-white rounded-[15px] transition-transform duration-300 hover:scale-105">
         바로가기
       </button>
     </li>
