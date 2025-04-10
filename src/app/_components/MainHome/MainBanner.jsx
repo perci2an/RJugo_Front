@@ -13,7 +13,10 @@ const BannerCard = ({ title, label, bgColor, href, imageSrc }) => {
       <Image src={imageSrc} alt="banner image" width={250} height={250} />
       <Link
         href={href}
-        className="block w-[330px] h-[70px] leading-[65px] text-[1.5rem] mt-[32px] bg-white/15 text-white rounded-[15px] text-center transition-transform duration-300 hover:scale-105"
+        className="flex items-center justify-center w-[330px] h-[70px] leading-[65px] text-[1.5rem] mt-[32px] 
+             bg-white/15 hover:bg-white/30 
+             text-white rounded-[15px] text-center 
+             transition-all duration-300 hover:scale-105"
       >
         바로가기
       </Link>
