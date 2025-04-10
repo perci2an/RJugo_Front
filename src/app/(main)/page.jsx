@@ -1,3 +1,9 @@
+import MainBanner from "../_components/MainHome/MainBanner";
+
 export default function Home() {
-  return <h1></h1>;
+  return (
+    <>
+      <MainBanner />
+    </>
+  );
 }

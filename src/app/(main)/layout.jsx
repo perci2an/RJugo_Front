@@ -9,10 +9,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body>
-        <main className="flex flex-col items-center">
-          <MainBanner />
-          {children}
-        </main>
+        <main className="flex flex-col items-center">{children}</main>
       </body>
     </html>
   );
