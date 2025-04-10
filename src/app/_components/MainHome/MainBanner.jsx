@@ -11,7 +11,7 @@ const BannerCard = ({ title, label, bgColor, imageSrc }) => {
         {title}
       </strong>
       <Image src={imageSrc} alt="banner image" width={350} height={370} />
-      <button className="block w-[400px] h-[80px] leading-[65px] text-[1.5rem] mt-[30px] bg-white/10 text-white rounded-[15px] transition-transform duration-300 hover:scale-105">
+      <button className="block w-[400px] h-[80px] leading-[65px] text-[1.5rem] mt-[30px] bg-white/15 text-white rounded-[15px] transition-transform duration-300 hover:scale-105">
         바로가기
       </button>
     </li>
@@ -22,7 +22,14 @@ export default function MainBanner() {
   return (
     <div className="flex flex-col text-center justify-center items-center text-nowrap w-full py-2 gap-9">
       <button className="text-[40px] font-semibold">
-        <Link href="/">알받기</Link>
+        <Link href="/">
+          <Image
+            src="/img/logo2.png"
+            alt="banner image"
+            width={200}
+            height={200}
+          />
+        </Link>
       </button>
 
       <div className="text-[#121212] font-light leading-[4.5rem] text-[4rem]">
@@ -41,16 +48,20 @@ export default function MainBanner() {
         <BannerCard
           title="정책정보"
           label="청년몽땅정보통 메인"
-          bgColor="bg-[#0085e4]"
+          bgColor="bg-[#2cb67d]"
           imageSrc="/img/policy.png"
         />
         <BannerCard
           title="금융정보"
           label="청년몽땅정보통 메인"
-          bgColor="bg-[#5c44f3]"
+          bgColor="bg-[#7f5af0]"
           imageSrc="/img/finance.png"
         />
       </ul>
+
+      <p className="mt-[-20px] text-[1rem] text-[#6d6d71]">
+        &copy; INDUK UNIVERSITY COMPUTER SOFTWARE ALBAKKI PROJECT.
+      </p>
     </div>
   );
 }
