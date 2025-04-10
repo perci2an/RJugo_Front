@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 
-const BannerCard = ({ title, label, bgColor, imageSrc }) => {
+const BannerCard = ({ title, label, bgColor, href, imageSrc }) => {
   return (
     <li
       className={`flex flex-col gap-1 p-[50px] rounded-[35px] ${bgColor} text-center items-center`}
@@ -11,9 +11,12 @@ const BannerCard = ({ title, label, bgColor, imageSrc }) => {
         {title}
       </strong>
       <Image src={imageSrc} alt="banner image" width={250} height={250} />
-      <button className="block w-[330px] h-[70px] leading-[65px] text-[1.5rem] mt-[32px] bg-white/15 text-white rounded-[15px] transition-transform duration-300 hover:scale-105">
+      <Link
+        href={href}
+        className="block w-[330px] h-[70px] leading-[65px] text-[1.5rem] mt-[32px] bg-white/15 text-white rounded-[15px] text-center transition-transform duration-300 hover:scale-105"
+      >
         바로가기
-      </button>
+      </Link>
     </li>
   );
 };
@@ -49,12 +52,14 @@ export default function MainBanner() {
           title="정책정보"
           label="몰랐던 기회, 지금 열려요!"
           bgColor="bg-[#2cb67d]"
+          href="/policy"
           imageSrc="/img/policy.png"
         />
         <BannerCard
           title="금융정보"
           label="내 지갑을 위한 머니꿀팁"
           bgColor="bg-[#7f5af0]"
+          href="/finance"
           imageSrc="/img/finance.png"
         />
       </ul>
