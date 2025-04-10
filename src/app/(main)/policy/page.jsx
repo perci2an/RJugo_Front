@@ -1,5 +1,6 @@
 import FilterBar from "../../_components/CustomFilter/FilterBar";
 import AnimatedText from "../../_components/AnimatedText";
+import TrendText from "../../_components/TrendText";
 
 export default function Home() {
   return (
@@ -10,6 +11,7 @@ export default function Home() {
       />
 
       <FilterBar />
+      <TrendText />
     </main>
   );
 }
