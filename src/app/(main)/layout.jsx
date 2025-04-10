@@ -1,4 +1,4 @@
-import MainBanner from "../_components/MainHome/MainBanner";
+import MainBanner from "../_components/MainBanner";
 
 export const metadata = {
   title: "RJugo",
