@@ -27,16 +27,7 @@ const BannerCard = ({ title, label, bgColor, href, imageSrc }) => {
 export default function MainBanner() {
   return (
     <div className="flex flex-col text-center justify-center items-center text-nowrap w-full py-2 gap-6">
-      <button className="text-[40px] font-semibold">
-        <Link href="/">
-          <Image
-            src="/img/logo2.png"
-            alt="banner image"
-            width={140}
-            height={140}
-          />
-        </Link>
-      </button>
+      <Image src="/img/logo2.png" alt="banner image" width={140} height={140} />
 
       <div className="text-[#121212] font-light leading-[4rem] text-[3rem]">
         <h2>
