@@ -20,7 +20,7 @@ const BannerCard = ({ title, label, bgColor, imageSrc }) => {
 
 export default function MainBanner() {
   return (
-    <div className="flex flex-col text-center justify-center items-center text-nowrap w-full py-2 gap-7">
+    <div className="flex flex-col text-center justify-center items-center text-nowrap w-full py-2 gap-6">
       <button className="text-[40px] font-semibold">
         <Link href="/">
           <Image
@@ -40,11 +40,11 @@ export default function MainBanner() {
         </h2>
       </div>
 
-      <p className="mt-2 text-[1.3rem] text-[#6d6d71]">
+      <p className="mb-[-10px] text-[1.3rem] text-[#6d6d71]">
         알받기에 오신 것을 환영합니다
       </p>
 
-      <ul className="flex justify-center w-full gap-[50px] mt-[30px] my-[60px]">
+      <ul className="flex justify-center w-full gap-[50px] mt-[40px] my-[60px]">
         <BannerCard
           title="정책정보"
           label="몰랐던 기회, 지금 열려요!"
