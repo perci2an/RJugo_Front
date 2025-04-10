@@ -1,4 +1,4 @@
-import CustomFilter from "../../_components/CustomFilter";
+import FilterBar from "../../_components/CustomFilter/FilterBar";
 
 export default function Home() {
   return (
@@ -10,7 +10,7 @@ export default function Home() {
       </h2>
 
       <div className="px-4">
-        <CustomFilter />
+        <FilterBar />
       </div>
     </main>
   );

@@ -1,4 +1,4 @@
-import CustomFilter from "../../_components/CustomFilter";
+import FilterBar from "../../_components/CustomFilter/FilterBar";
 
 export default function Home() {
   return (
@@ -8,7 +8,7 @@ export default function Home() {
         청년을 위한 혜택, 모르면 손해예요 🌟
       </h2>
 
-      <CustomFilter />
+      <FilterBar />
     </main>
   );
 }
