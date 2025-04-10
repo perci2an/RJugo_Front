@@ -1,5 +1,6 @@
 import FilterBar from "../../_components/CustomFilter/FilterBar";
 import AnimatedText from "../../_components/AnimatedText";
+import TrendText from "../../_components/TrendText";
 
 export default function Home() {
   return (
@@ -9,9 +10,8 @@ export default function Home() {
         className="w-screen bg-[#7f5af0] py-16 mt-8 text-white text-center text-[40px] font-light"
       />
 
-      <div className="px-4">
-        <FilterBar />
-      </div>
+      <FilterBar />
+      <TrendText />
     </main>
   );
 }
