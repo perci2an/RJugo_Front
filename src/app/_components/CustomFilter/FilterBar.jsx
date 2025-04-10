@@ -51,7 +51,7 @@ export default function FilterBar() {
   const selectedCount = Object.values(selected).flat().length;
 
   return (
-    <div className="relative w-full max-w-4xl mx-auto mt-24" ref={inputRef}>
+    <div className="relative w-full max-w-4xl mx-auto mt-20" ref={inputRef}>
       <div className="bg-white shadow-md border border-gray-300 rounded-xl flex items-center w-full px-0 py-0 overflow-hidden">
         <div className="flex items-center gap-2 px-6 py-4 bg-[#4A5353] text-white font-semibold text-base rounded-l-xl">
           맞춤형 검색정책 <BookOpen className="w-4 h-4 text-[#E2C044]" />
