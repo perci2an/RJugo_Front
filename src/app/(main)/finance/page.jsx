@@ -1,6 +1,8 @@
 import FilterBar from "../../_components/CustomFilter/FilterBar";
 import AnimatedText from "../../_components/AnimatedText";
 import TrendText from "../../_components/TrendText";
+import InfoSlide from "../../_components/InfoCard/InfoSlider";
+import AnimatedOnScroll from "../../_components/AnimatedOnScroll";
 
 export default function Home() {
   return (
@@ -12,6 +14,10 @@ export default function Home() {
 
       <FilterBar />
       <TrendText />
+
+      <AnimatedOnScroll>
+        <InfoSlide />
+      </AnimatedOnScroll>
     </main>
   );
 }
