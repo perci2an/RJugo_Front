@@ -31,7 +31,7 @@ export default function MainBanner() {
 
       <div className="text-[#121212] font-light leading-[4rem] text-[3rem]">
         <h2>
-          <strong className="font-semibold">청년</strong>혜택, 더이상
+          <strong className="font-semibold">청년</strong>혜택, 더 이상
           <br />
           <span className="inline">어렵게 찾지 말고 </span>
           <strong className="font-semibold">한번에</strong> 챙겨요!
