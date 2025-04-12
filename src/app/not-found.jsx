@@ -6,9 +6,9 @@ export const metadata = {
 
 export default function NotFound() {
   return (
-    <div className="min-h-screen flex flex-col justify-center items-center bg-gradient-to-br from-[#fefcfb] via-[#ece9f1] to-[#d9e1f2] text-center animate-fadeIn">
+    <div className="min-h-screen flex flex-col justify-center items-center pt-14 bg-gradient-to-br from-[#fefcfb] via-[#ece9f1] to-[#d9e1f2] text-center animate-fadeIn">
       <Image
-        className="absolute top-20"
+        className="absolute top-28"
         src="/img/logo2.png"
         alt="banner image"
         width={210}
