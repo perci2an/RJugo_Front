@@ -31,9 +31,10 @@ export default function MainBanner() {
 
       <div className="text-[#121212] font-light leading-[4rem] text-[3rem]">
         <h2>
-          <strong className="font-semibold">서울</strong>이{" "}
-          <strong className="font-semibold">청년</strong>을 위해 <br />
-          무얼 하는지 <span className="inline">한눈에 보여줄게!</span>
+          <strong className="font-semibold">청년</strong>혜택, 더이상
+          <br />
+          <span className="inline">어렵게 찾지 말고 </span>
+          <strong className="font-semibold">한번에</strong> 챙겨요!
         </h2>
       </div>
 
