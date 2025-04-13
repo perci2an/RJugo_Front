@@ -18,7 +18,7 @@ export default function Menu() {
 
   return (
     <div className="absolute right-0 top-[70px] w-[360px] p-1 bg-white border-[3px] border-gray-300 rounded-[30px] z-50">
-      <div className="border-[1.5px] border-dashed border-gray-200 rounded-[27px] p-5">
+      <div className="border-[1.5px] border-dashed border-gray-200 rounded-[27px] px-5 pt-5 pb-3">
         <p className="w-full text-center pt-2 text-xl font-bold text-gray-700 tracking-tight leading-snug">
           알아두면 좋은 공공정보 포털
         </p>
@@ -60,19 +60,26 @@ export default function Menu() {
             url="https://www.youthcenter.go.kr"
           />
           <MenuItem
-            src="/img/egg.png"
-            label="청년정책설명서"
-            description="주요 청년 정책 일정 소개"
+            src="/img/MenuLogo/employment24.png"
+            label="고용24"
+            description="취업 지원 서비스 제공"
+            url="https://work24.go.kr/cm/main.do"
           />
           <MenuItem
-            src="/img/egg.png"
-            label="청년정책설명서"
-            description="주요 청년 정책 일정 소개"
+            src="/img/MenuLogo/youthFoundation.png"
+            label="청년재단"
+            description={
+              <>
+                청년을 위한 <br /> 다각적 지원 사업
+              </>
+            }
+            url="https://kyf.or.kr/"
           />
           <MenuItem
-            src="/img/egg.png"
-            label="청년정책설명서"
-            description="주요 청년 정책 일정 소개"
+            src="/img/MenuLogo/scholarship.png"
+            label="한국장학재단"
+            description="학자금 지원과 멘토링"
+            url="https://www.kosaf.go.kr/ko/main.do"
           />
         </div>
       </div>
