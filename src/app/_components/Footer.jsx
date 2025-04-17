@@ -20,7 +20,7 @@ export default function Footer() {
         <div className="flex justify-center md:justify-center">
           <div className="w-28 h-28 relative">
             <Image
-              src="/character.png"
+              src="/img/egg.png"
               alt="알주고 캐릭터"
               layout="fill"
               objectFit="contain"
