@@ -1,4 +1,4 @@
-import FilterBar from "../../_components/CustomFilter/FilterBar";
+import FilterBar from "../../_components/CustomFilter/PolicyFilterBar";
 import AnimatedText from "../../_components/AnimatedText";
 import TrendText from "../../_components/TrendText";
 import InfoSlide from "../../_components/InfoCard/InfoSlider";
