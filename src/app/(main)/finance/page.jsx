@@ -1,4 +1,4 @@
-import FilterBar from "../../_components/CustomFilter/PolicyFilterBar";
+import FinanceFilterBar from "../../_components/CustomFilter/FinanceFilterBar";
 import AnimatedText from "../../_components/AnimatedText";
 import TrendText from "../../_components/TrendText";
 import InfoSlide from "../../_components/InfoCard/InfoSlider";
@@ -12,7 +12,7 @@ export default function Home() {
         className="w-screen bg-[#7f5af0] py-16 mt-8 text-white text-center text-[40px] font-light"
       />
 
-      <FilterBar />
+      <FinanceFilterBar />
       <TrendText />
 
       <AnimatedOnScroll>

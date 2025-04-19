@@ -4,14 +4,14 @@ import React, { useState, useRef, useEffect } from "react";
 import { BookOpen, Search, X } from "lucide-react";
 import FilterSection from "./FilterSection";
 
-const filterConfig = {
+const policyFilterConfig = {
   지역: ["서울특별시", "경기도", "강원도", "충청도", "전라도", "경상도"],
   분야: ["일자리", "주거", "교육", "생활지원", "대외활동", "문화/예술"],
   취업상태: ["재직자", "구직자", "학생", "무직"],
   연령: ["19~24", "25~29", "30~34", "35~39"],
 };
 
-export default function FilterBar() {
+export default function PolicyFilterBar() {
   const [showFilters, setShowFilters] = useState(false);
   const inputRef = useRef(null);
 
@@ -93,7 +93,7 @@ export default function FilterBar() {
 
       {showFilters && (
         <div className="absolute z-20 w-full mt-2 bg-white text-gray-800 border border-gray-200 rounded-xl shadow-lg p-6 space-y-6">
-          {Object.entries(filterConfig).map(([section, options]) => (
+          {Object.entries(policyFilterConfig).map(([section, options]) => (
             <FilterSection
               key={section}
               title={section}

@@ -4,22 +4,22 @@ import React, { useState, useRef, useEffect } from "react";
 import { BookOpen, Search, X } from "lucide-react";
 import FilterSection from "./FilterSection";
 
-const filterConfig = {
+const financeFilterConfig = {
   은행: ["NH농협", "국민", "신한", "우리", "수협", "기업"],
-  분야: ["일자리", "주거", "교육", "생활지원", "대외활동", "문화/예술"],
-  취업상태: ["재직자", "구직자", "학생", "무직"],
-  연령: ["19~24", "25~29", "30~34", "35~39"],
+  투자형태: ["주식", "채권", "부동산", "펀드"],
+  수익률: ["5% 이하", "5%~10%", "10% 이상"],
+  기간: ["1개월 이하", "3개월 이하", "6개월 이하", "1년 이상"],
 };
 
-export default function FilterBar() {
+export default function FinanceFilterBar() {
   const [showFilters, setShowFilters] = useState(false);
   const inputRef = useRef(null);
 
   const [selected, setSelected] = useState({
     은행: [],
-    분야: [],
-    취업상태: [],
-    연령: [],
+    투자형태: [],
+    수익률: [],
+    기간: [],
   });
 
   const toggleSelection = (section, value) => {
@@ -54,7 +54,7 @@ export default function FilterBar() {
     <div className="relative w-full max-w-4xl mx-auto mt-20" ref={inputRef}>
       <div className="bg-white shadow-md border border-gray-300 rounded-xl flex items-center w-full px-0 py-0 overflow-hidden">
         <div className="flex items-center gap-2 px-6 py-4 bg-[#4A5353] text-white font-semibold text-base rounded-l-xl">
-          맞춤형 검색정책 <BookOpen className="w-4 h-4 text-[#E2C044]" />
+          맞춤형 금융검색 <BookOpen className="w-4 h-4 text-[#E2C044]" />
         </div>
 
         <div
@@ -93,7 +93,7 @@ export default function FilterBar() {
 
       {showFilters && (
         <div className="absolute z-20 w-full mt-2 bg-white text-gray-800 border border-gray-200 rounded-xl shadow-lg p-6 space-y-6">
-          {Object.entries(filterConfig).map(([section, options]) => (
+          {Object.entries(financeFilterConfig).map(([section, options]) => (
             <FilterSection
               key={section}
               title={section}
