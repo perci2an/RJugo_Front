@@ -5,6 +5,59 @@ import InfoSlide from "../../_components/InfoCard/InfoSlider";
 import AnimatedOnScroll from "../../_components/AnimatedOnScroll";
 
 export default function Home() {
+  const financeData = [
+    {
+      title: "청년 전월세 지원 사업",
+      location: "서울시",
+      bgImage: "/img/CardImage/Finance/1.jpeg",
+    },
+    {
+      title: "자산형성 지원 프로그램",
+      location: "부산시",
+      bgImage: "/img/CardImage/Finance/2.jpeg",
+    },
+    {
+      title: "자산형성 지원 프로그램",
+      location: "부산시",
+      bgImage: "/img/CardImage/Finance/5.png",
+    },
+    {
+      title: "자산형성 지원 프로그램",
+      location: "부산시",
+      bgImage: "/img/CardImage/Finance/4.png",
+    },
+    {
+      title: "자산형성 지원 프로그램",
+      location: "부산시",
+      bgImage: "/img/CardImage/Finance/3.jpeg",
+    },
+    {
+      title: "자산형성 지원 프로그램",
+      location: "부산시",
+      bgImage: "/img/CardImage/Finance/6.png",
+    },
+    {
+      title: "자산형성 지원 프로그램",
+      location: "부산시",
+      bgImage: "/img/CardImage/Finance/7.png",
+    },
+    {
+      title: "자산형성 지원 프로그램",
+      location: "부산시",
+      bgImage: "/img/CardImage/Finance/8.jpeg",
+    },
+    {
+      title: "자산형성 지원 프로그램",
+      location: "부산시",
+      bgImage: "/img/CardImage/Finance/9.png",
+    },
+    {
+      title: "자산형성 지원 프로그램",
+      location: "부산시",
+      bgImage: "/img/CardImage/Finance/10.png",
+    },
+  ];
+
   return (
     <main>
       <div
@@ -24,7 +77,7 @@ export default function Home() {
       <TrendText />
 
       <AnimatedOnScroll>
-        <InfoSlide />
+        <InfoSlide data={financeData} />
       </AnimatedOnScroll>
     </main>
   );
