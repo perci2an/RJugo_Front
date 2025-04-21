@@ -5,10 +5,16 @@ import { BookOpen, Search, X } from "lucide-react";
 import FilterSection from "./FilterSection";
 
 const financeFilterConfig = {
-  은행: ["NH농협", "국민", "신한", "우리", "수협", "기업"],
-  투자형태: ["주식", "채권", "부동산", "펀드"],
-  수익률: ["5% 이하", "5%~10%", "10% 이상"],
-  기간: ["1개월 이하", "3개월 이하", "6개월 이하", "1년 이상"],
+  은행: ["NH농협", "국민", "신한", "우리", "수협", "기업", "카카오", "토스"],
+  금리: ["기본 금리 높은 순", "최고 금리 높은 순"],
+  가입기간: ["1개월", "3개월", "6개월", "1년", "1년 이상"],
+  최소금액: [
+    "만원 미만",
+    "1만원 ~ 30만원",
+    "30만원 ~ 50만원",
+    "50만원 ~ 100만원",
+    "100만원 초과",
+  ],
 };
 
 export default function FinanceFilterBar() {
@@ -17,9 +23,9 @@ export default function FinanceFilterBar() {
 
   const [selected, setSelected] = useState({
     은행: [],
-    투자형태: [],
-    수익률: [],
-    기간: [],
+    금리: [],
+    가입기간: [],
+    최소금액: [],
   });
 
   const toggleSelection = (section, value) => {
