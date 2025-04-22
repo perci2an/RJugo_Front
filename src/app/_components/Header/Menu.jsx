@@ -1,5 +1,3 @@
-import Image from "next/image";
-
 export default function Menu() {
   const MenuItem = ({ src, label, description, url }) => {
     return (
@@ -83,15 +81,6 @@ export default function Menu() {
           />
         </div>
       </div>
-    </div>
-  );
-}
-
-function MenuItem({ src, label }) {
-  return (
-    <div className="flex flex-col items-center text-sm hover:opacity-80 transition-opacity duration-200 cursor-pointer">
-      <Image src={src} alt={label} width={40} height={40} />
-      <span className="mt-1">{label}</span>
     </div>
   );
 }
