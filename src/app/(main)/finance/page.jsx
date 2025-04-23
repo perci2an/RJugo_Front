@@ -7,22 +7,22 @@ import AnimatedOnScroll from "../../_components/AnimatedOnScroll";
 export default function Home() {
   const financeData = [
     {
-      title: "청년 전월세 지원 사업",
+      title: "서민금융 종합플랫폼 잇다",
       location: "서울시",
       bgImage: "/img/CardImage/Finance/1.jpeg",
     },
     {
-      title: "자산형성 지원 프로그램",
+      title: "청년도약계좌 기여금 확대",
       location: "부산시",
       bgImage: "/img/CardImage/Finance/2.jpeg",
     },
     {
-      title: "자산형성 지원 프로그램",
+      title: "포용이의 홀로서기: 대출상품 알아보기",
       location: "부산시",
       bgImage: "/img/CardImage/Finance/5.png",
     },
     {
-      title: "자산형성 지원 프로그램",
+      title: "온라인 금융교육 이벤트",
       location: "부산시",
       bgImage: "/img/CardImage/Finance/4.png",
     },
