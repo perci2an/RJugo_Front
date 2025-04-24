@@ -27,7 +27,7 @@ export default function Home() {
       bgImage: "/img/CardImage/Finance/4.png",
     },
     {
-      title: "자산형성 지원 프로그램",
+      title: "금융지주회사법·시행령 개정안 입법예고",
       location: "부산시",
       bgImage: "/img/CardImage/Finance/3.jpeg",
     },
