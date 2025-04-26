@@ -37,7 +37,7 @@ export default function Home() {
       bgImage: "/img/CardImage/Finance/6.png",
     },
     {
-      title: "자산형성 지원 프로그램",
+      title: "서울 동아리: 시정 가치 연계 사회기여 활동",
       location: "부산시",
       bgImage: "/img/CardImage/Finance/7.png",
     },
