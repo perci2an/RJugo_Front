@@ -42,7 +42,7 @@ export default function Home() {
       bgImage: "/img/CardImage/Finance/7.png",
     },
     {
-      title: "자산형성 지원 프로그램",
+      title: "온라인 예금중계 서비스",
       location: "부산시",
       bgImage: "/img/CardImage/Finance/8.jpeg",
     },
