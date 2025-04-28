@@ -47,7 +47,7 @@ export default function Home() {
       bgImage: "/img/CardImage/Finance/8.jpeg",
     },
     {
-      title: "자산형성 지원 프로그램",
+      title: "서민금융생활상담: 금융소비자보호법",
       location: "부산시",
       bgImage: "/img/CardImage/Finance/9.png",
     },
