@@ -22,39 +22,91 @@ export default function FinanceMenu() {
           <MenuItem
             src="/img/MenuLogo/financePolicy.png"
             label="서민금융진흥원"
-            description="지원 금융제도 안내"
+            description="금융지원 제도 안내"
             url="https://www.kinfa.or.kr/"
           />
           <MenuItem
             src="/img/MenuLogo/fss.png"
             label="금융감독원"
-            description="금융 교육자료 제공"
+            description={
+              <>
+                금융 교육자료 및<br />
+                소비자 권익 보호
+              </>
+            }
             url="https://www.fss.or.kr/"
           />
           <MenuItem
             src="/img/MenuLogo/bok.png"
             label="한국은행"
-            description="경제 흐름 리포트"
+            description="국내외 경제 흐름"
             url="https://www.bok.or.kr/"
           />
           <MenuItem
             src="/img/MenuLogo/kb.png"
-            label="국민은행"
-            description="청년 금융상품 정보"
-            url="https://obank.kbstar.com/"
+            label="파인정보포털"
+            description={
+              <>
+                청년 대상 금융상품 및<br />
+                비교 정보 제공
+              </>
+            }
+            url="https://fine.fss.or.kr/"
           />
           <MenuItem
             src="/img/MenuLogo/shinhan.png"
-            label="신한은행"
-            description="청년 적금 혜택 안내"
-            url="https://www.shinhan.com/"
+            label="전국은행연합회"
+            description={
+              <>
+                청년·대학생 대상
+                <br />
+                금융 혜택
+              </>
+            }
+            url="https://www.kfb.or.kr/"
           />
           <MenuItem
             src="/img/MenuLogo/hana.png"
-            label="하나은행"
-            description="청년 지원 상품 모음"
-            url="https://www.kebhana.com/"
+            label="한국거래소"
+            description="금융투자와 증권시장 정보"
+            url="https://www.krx.co.kr/"
           />
+          <MenuItem
+            src="/img/MenuLogo/hana.png"
+            label="기획재정부"
+            description={
+              <>
+                국가 재정 정책과
+                <br />
+                청년 금융정책 소개
+              </>
+            }
+            url="https://www.moef.go.kr/"
+          />
+          <MenuItem
+            src="/img/MenuLogo/hana.png"
+            label="금융위원회"
+            description={
+              <>
+                청년을 위한
+                <br />
+                금융정책·규제 정보
+              </>
+            }
+            url="https://www.fsc.go.kr/"
+          />
+          <MenuItem
+            src="/img/MenuLogo/hana.png"
+            label="신용보증기금"
+            description={
+              <>
+                청년 창업, 중소기업
+                <br />
+                금융지원 안내
+              </>
+            }
+            url="https://www.kodit.co.kr/"
+          />{" "}
         </div>
       </div>
     </div>
