@@ -20,49 +20,49 @@ export default function PolicyMenu() {
         </p>
         <div className="bg-white rounded-[27px] p-2 grid grid-cols-3 gap-x-10 gap-y-6 mt-4 text-center">
           <MenuItem
-            src="/img/MenuLogo/wellFunded.png"
+            src="/img/MenuLogo/Policy/wellFunded.png"
             label="주택도시기금"
             description="청약 정보 및 지원 정책"
             url="https://nhuf.molit.go.kr"
           />
           <MenuItem
-            src="/img/MenuLogo/youthPolicy.png"
+            src="/img/MenuLogo/Policy/youthPolicy.png"
             label="청년정책설명서"
             description="주요 청년 정책 일정 소개"
             url="https://youth.seoul.go.kr/mainB.do"
           />
           <MenuItem
-            src="/img/MenuLogo/startUp.png"
+            src="/img/MenuLogo/Policy/startUp.png"
             label="K-Startup"
             description="청년 창업자 지원 서비스"
             url="https://www.k-startup.go.kr"
           />
           <MenuItem
-            src="/img/MenuLogo/welfare.png"
+            src="/img/MenuLogo/Policy/welfare.png"
             label="복지로"
             description="다양한 복지 혜택 확인"
             url="https://www.bokjiro.go.kr/ssis-tbu/index.do"
           />
           <MenuItem
-            src="/img/MenuLogo/government24.png"
+            src="/img/MenuLogo/Policy/government24.png"
             label="정부24"
             description="보조금 확인 및 신청"
             url="https://www.gov.kr"
           />
           <MenuItem
-            src="/img/MenuLogo/allYoung.png"
+            src="/img/MenuLogo/Policy/allYoung.png"
             label="온통청년"
             description="더 많은 청년 정책"
             url="https://www.youthcenter.go.kr"
           />
           <MenuItem
-            src="/img/MenuLogo/employment24.png"
+            src="/img/MenuLogo/Policy/employment24.png"
             label="고용24"
             description="취업 지원 서비스 제공"
             url="https://work24.go.kr/cm/main.do"
           />
           <MenuItem
-            src="/img/MenuLogo/youthFoundation.png"
+            src="/img/MenuLogo/Policy/youthFoundation.png"
             label="청년재단"
             description={
               <>
@@ -72,7 +72,7 @@ export default function PolicyMenu() {
             url="https://kyf.or.kr/"
           />
           <MenuItem
-            src="/img/MenuLogo/scholarship.png"
+            src="/img/MenuLogo/Policy/scholarship.png"
             label="한국장학재단"
             description="학자금 지원과 멘토링"
             url="https://www.kosaf.go.kr/ko/main.do"
