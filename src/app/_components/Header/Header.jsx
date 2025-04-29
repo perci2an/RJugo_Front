@@ -3,7 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useState, useRef, useEffect } from "react";
-import Menu from "../Header/Menu";
+import Menu from "./PolicyMenu";
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
