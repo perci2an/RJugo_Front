@@ -16,8 +16,7 @@ export default function FinanceMenu() {
     <div className="absolute right-0 top-[70px] w-[360px] p-1 bg-white border-[3px] border-gray-300 rounded-[30px] z-50">
       <div className="border-[1.5px] border-dashed border-gray-200 rounded-[27px] px-5 pt-5 pb-3">
         <p className="w-full text-center pt-2 text-xl font-bold text-gray-700 tracking-tight leading-snug">
-          알아두면 좋은 금융 정보
-          {/* 알고 쓰면 힘이 되는 금융 포털 */}
+          알고 쓰면 힘이 되는 금융 포털
         </p>
         <div className="bg-white rounded-[27px] p-2 grid grid-cols-3 gap-x-10 gap-y-6 mt-4 text-center">
           <MenuItem
