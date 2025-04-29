@@ -1,18 +1,16 @@
-export default function Menu() {
-  const MenuItem = ({ src, label, description, url }) => {
-    return (
-      <a
-        href={url}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="flex flex-col items-center text-center space-y-2 hover:opacity-80 transition-opacity duration-200"
-      >
-        <img src={src} alt={label} className="w-11 h-11 object-contain" />
-        <p className="text-[12px] font-semibold text-gray-800">{label}</p>
-        <p className="text-[10px] text-gray-500">{description}</p>
-      </a>
-    );
-  };
+export default function PolicyMenu() {
+  const MenuItem = ({ src, label, description, url }) => (
+    <a
+      href={url}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="flex flex-col items-center text-center space-y-2 hover:opacity-80 transition-opacity duration-200"
+    >
+      <img src={src} alt={label} className="w-11 h-11 object-contain" />
+      <p className="text-[12px] font-semibold text-gray-800">{label}</p>
+      <p className="text-[10px] text-gray-500">{description}</p>
+    </a>
+  );
 
   return (
     <div className="absolute right-0 top-[70px] w-[360px] p-1 bg-white border-[3px] border-gray-300 rounded-[30px] z-50">
