@@ -52,7 +52,7 @@ export default function Home() {
       bgImage: "/img/CardImage/Finance/9.png",
     },
     {
-      title: "자산형성 지원 프로그램",
+      title: "온택트 공개교육",
       location: "부산시",
       bgImage: "/img/CardImage/Finance/10.png",
     },
