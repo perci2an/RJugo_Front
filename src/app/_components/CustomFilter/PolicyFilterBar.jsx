@@ -11,39 +11,38 @@ const policyFilterConfig = {
   연령: ["19~24", "25~29", "30~34", "35~39"],
 };
 
-export default function PolicyFilterBar({ onChangeSelected }) {
-  const [showFilters, setShowFilters] = useState(false);
-  const inputRef = useRef(null);
-
-  const [selected, setSelected] = useState({
+export default function PolicyFilterBar({
+  selectedFilters = {
     지역: [],
     분야: [],
     취업상태: [],
     연령: [],
-  });
+  },
+  setSelectedFilters,
+  onSearch,
+}) {
+  const [showFilters, setShowFilters] = useState(false);
+  const inputRef = useRef(null);
 
   const toggleSelection = (section, value) => {
-    setSelected((prev) => {
-      const newSelected = {
-        ...prev,
-        [section]: prev[section].includes(value)
-          ? prev[section].filter((v) => v !== value)
-          : [...prev[section], value],
-      };
-      onChangeSelected?.(newSelected);
-      return newSelected;
-    });
+    setSelectedFilters((prev) => ({
+      ...prev,
+      [section]: prev[section].includes(value)
+        ? prev[section].filter((v) => v !== value)
+        : [...prev[section], value],
+    }));
+  };
+
+  const handleSearchClick = () => {
+    setShowFilters(false);
+    if (onSearch) onSearch();
   };
 
   const removeTag = (section, value) => {
-    setSelected((prev) => {
-      const newSelected = {
-        ...prev,
-        [section]: prev[section].filter((v) => v !== value),
-      };
-      onChangeSelected?.(newSelected);
-      return newSelected;
-    });
+    setSelectedFilters((prev) => ({
+      ...prev,
+      [section]: prev[section].filter((v) => v !== value),
+    }));
   };
 
   useEffect(() => {
@@ -56,7 +55,7 @@ export default function PolicyFilterBar({ onChangeSelected }) {
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
-  const selectedCount = Object.values(selected).flat().length;
+  const selectedCount = Object.values(selectedFilters ?? {}).flat().length;
 
   return (
     <div className="relative w-full max-w-4xl mx-auto mt-20" ref={inputRef}>
@@ -72,7 +71,7 @@ export default function PolicyFilterBar({ onChangeSelected }) {
           {selectedCount === 0 ? (
             <span className="text-gray-400 text-base">필터를 선택해주세요</span>
           ) : (
-            Object.entries(selected).map(([section, items]) =>
+            Object.entries(selectedFilters).map(([section, items]) =>
               items.map((item) => (
                 <span
                   key={`${section}-${item}`}
@@ -93,10 +92,13 @@ export default function PolicyFilterBar({ onChangeSelected }) {
           )}
         </div>
 
-        <div className="flex items-center gap-2 px-6 py-4 bg-[#4A5353] text-white font-semibold text-base rounded-r-xl hover:bg-gray-700">
+        <button
+          className="flex items-center gap-2 px-6 py-4 bg-[#4A5353] text-white font-semibold text-base rounded-r-xl hover:bg-gray-700"
+          onClick={handleSearchClick}
+        >
           <Search className="w-4 h-4 text-[#E2C044]" />
           검색
-        </div>
+        </button>
       </div>
 
       {showFilters && (
@@ -106,7 +108,7 @@ export default function PolicyFilterBar({ onChangeSelected }) {
               key={section}
               title={section}
               options={options}
-              selected={selected[section]}
+              selected={selectedFilters?.[section] ?? []}
               onToggle={(value) => toggleSelection(section, value)}
             />
           ))}

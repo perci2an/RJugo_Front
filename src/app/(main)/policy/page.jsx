@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useMemo } from "react";
+import { useState } from "react";
 import PolicyFilterBar from "../../_components/CustomFilter/PolicyFilterBar";
 import AnimatedText from "../../_components/AnimatedText";
 import TrendText from "../../_components/TrendText";
@@ -17,8 +17,12 @@ export default function Home() {
     연령: [],
   });
 
-  const filteredData = useMemo(() => {
-    return policyDummyData.filter((item) => {
+  const [filteredData, setFilteredData] = useState(
+    policyDummyData.slice(0, 10)
+  );
+
+  const handleSearch = () => {
+    const matched = policyDummyData.filter((item) => {
       return (
         (selectedFilters.지역.length === 0 ||
           selectedFilters.지역.includes(item.location)) &&
@@ -30,7 +34,9 @@ export default function Home() {
           selectedFilters.연령.includes(item.연령))
       );
     });
-  }, [selectedFilters]);
+
+    setFilteredData(matched);
+  };
 
   return (
     <main>
@@ -47,7 +53,11 @@ export default function Home() {
         />
       </div>
 
-      <PolicyFilterBar onChangeSelected={setSelectedFilters} />
+      <PolicyFilterBar
+        selectedFilters={selectedFilters}
+        setSelectedFilters={setSelectedFilters}
+        onSearch={handleSearch}
+      />
 
       <TrendText />
 
