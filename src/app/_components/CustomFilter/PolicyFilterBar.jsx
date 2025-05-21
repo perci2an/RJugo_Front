@@ -11,7 +11,7 @@ const policyFilterConfig = {
   연령: ["19~24", "25~29", "30~34", "35~39"],
 };
 
-export default function PolicyFilterBar() {
+export default function PolicyFilterBar({ onChangeSelected }) {
   const [showFilters, setShowFilters] = useState(false);
   const inputRef = useRef(null);
 
@@ -23,19 +23,27 @@ export default function PolicyFilterBar() {
   });
 
   const toggleSelection = (section, value) => {
-    setSelected((prev) => ({
-      ...prev,
-      [section]: prev[section].includes(value)
-        ? prev[section].filter((v) => v !== value)
-        : [...prev[section], value],
-    }));
+    setSelected((prev) => {
+      const newSelected = {
+        ...prev,
+        [section]: prev[section].includes(value)
+          ? prev[section].filter((v) => v !== value)
+          : [...prev[section], value],
+      };
+      onChangeSelected?.(newSelected);
+      return newSelected;
+    });
   };
 
   const removeTag = (section, value) => {
-    setSelected((prev) => ({
-      ...prev,
-      [section]: prev[section].filter((v) => v !== value),
-    }));
+    setSelected((prev) => {
+      const newSelected = {
+        ...prev,
+        [section]: prev[section].filter((v) => v !== value),
+      };
+      onChangeSelected?.(newSelected);
+      return newSelected;
+    });
   };
 
   useEffect(() => {
