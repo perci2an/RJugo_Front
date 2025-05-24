@@ -1,8 +1,10 @@
 import Link from "next/link";
 
-export default function InfoCard({ id, title, location, bgImage }) {
+export default function InfoCard({ id, type, title, location, bgImage }) {
   return (
-    <Link href={`/card/${id}`}>
+    <Link href={`/card/${type}/${id}`}>
+      {" "}
+      {/* ✅ 수정된 링크 */}
       <div className="w-[260px] h-[360px] rounded-2xl bg-white shadow-md border border-gray-200 relative overflow-hidden group transition-all duration-300 hover:bg-[#f9f9f9] hover:border-[#7f5af0] cursor-pointer">
         <div className="absolute left-0 top-0 h-full w-1 bg-[#7f5af0] scale-y-0 group-hover:scale-y-100 origin-top transition-transform duration-300" />
         <div className="h-3/5 rounded-t-2xl overflow-hidden relative">
