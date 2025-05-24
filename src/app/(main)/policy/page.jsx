@@ -6,7 +6,7 @@ import AnimatedText from "../../_components/AnimatedText";
 import TrendText from "../../_components/TrendText";
 import InfoSlide from "../../_components/InfoCard/InfoSlider";
 import AnimatedOnScroll from "../../_components/AnimatedOnScroll";
-import { cardMeta } from "../../_data/policy-meta";
+import { cardMeta } from "../../_data/cards-meta";
 
 export default function Home() {
   const [selectedFilters, setSelectedFilters] = useState({
