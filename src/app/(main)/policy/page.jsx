@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import PolicyFilterBar from "../../_components/CustomFilter/PolicyFilterBar";
 import AnimatedText from "../../_components/AnimatedText";
 import TrendText from "../../_components/TrendText";
