@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   output: "export",
-  basePath: "/RJugo_Front", // 깃허브 페이지 경로
+  basePath: "/RJugo_Front",
   assetPrefix: "/RJugo_Front/",
 };
 

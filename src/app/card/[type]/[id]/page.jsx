@@ -1,7 +1,6 @@
 import fs from "fs";
 import path from "path";
 
-// ✅ 필수: generateStaticParams 추가
 export function generateStaticParams() {
   const policyDir = path.join(process.cwd(), "public", "data", "policy");
   const financeDir = path.join(process.cwd(), "public", "data", "finance");
@@ -26,7 +25,6 @@ export function generateStaticParams() {
   return [...policyParams, ...financeParams];
 }
 
-// ✅ 실제 페이지 렌더링
 export default async function CardDetailPage({ params }) {
   const { type, id } = params;
 
