@@ -1,9 +1,8 @@
-// /app/card/[type]/[id]/page.jsx
 import fs from "fs";
 import path from "path";
 
 export default async function CardDetailPage({ params }) {
-  const { type, id } = params; // type: "policy" or "finance"
+  const { type, id } = params;
 
   const filePath = path.join(
     process.cwd(),
@@ -26,12 +25,35 @@ export default async function CardDetailPage({ params }) {
 
   return (
     <div className="p-6 max-w-2xl mx-auto">
+      {card.image && (
+        <img
+          src={card.image}
+          alt={card.title}
+          className="mb-6 w-full h-64 object-cover rounded-xl shadow"
+        />
+      )}
       <h1 className="text-3xl font-bold mb-4">{card.title}</h1>
       <p className="text-gray-700 mb-6">{card.description}</p>
-      <div className="text-sm text-gray-500">
-        <p>📍 지역: {card.location}</p>
-        <p>🗂️ 분야: {card.category}</p>
-        <p>👤 연령: {card.age}</p>
+      <div className="text-sm text-gray-500 space-y-1">
+        <p>
+          📍 지역:{" "}
+          {Array.isArray(card.location)
+            ? card.location.join(", ")
+            : card.location}
+        </p>
+        <p>
+          🗂️ 분야:{" "}
+          {Array.isArray(card.category)
+            ? card.category.join(", ")
+            : card.category}
+        </p>
+        <p>
+          👤 연령: {Array.isArray(card.age) ? card.age.join(", ") : card.age}
+        </p>
+        <p>
+          👍 추천 상대:{" "}
+          {Array.isArray(card.status) ? card.status.join(", ") : card.status}
+        </p>
         <p>내용: {card.details}</p>
       </div>
     </div>
