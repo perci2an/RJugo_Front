@@ -1,13 +1,12 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import PolicyFilterBar from "../../_components/CustomFilter/PolicyFilterBar";
 import AnimatedText from "../../_components/AnimatedText";
 import TrendText from "../../_components/TrendText";
 import InfoSlide from "../../_components/InfoCard/InfoSlider";
 import AnimatedOnScroll from "../../_components/AnimatedOnScroll";
-
-import policyDummyData from "../../_data/policyDummyData";
+import { cardMeta } from "../../_data/cards-meta";
 
 export default function Home() {
   const [selectedFilters, setSelectedFilters] = useState({
@@ -17,24 +16,21 @@ export default function Home() {
     연령: [],
   });
 
-  const [filteredData, setFilteredData] = useState(
-    policyDummyData.slice(0, 10)
-  );
+  const [filteredData, setFilteredData] = useState(cardMeta.slice(0, 10));
 
   const handleSearch = () => {
-    const matched = policyDummyData.filter((item) => {
+    const matched = cardMeta.filter((item) => {
       return (
         (selectedFilters.지역.length === 0 ||
           selectedFilters.지역.includes(item.location)) &&
         (selectedFilters.분야.length === 0 ||
-          selectedFilters.분야.includes(item.분야)) &&
+          selectedFilters.분야.includes(item.category)) &&
         (selectedFilters.취업상태.length === 0 ||
-          selectedFilters.취업상태.includes(item.취업상태)) &&
+          selectedFilters.취업상태.includes(item.status)) &&
         (selectedFilters.연령.length === 0 ||
-          selectedFilters.연령.includes(item.연령))
+          selectedFilters.연령.includes(item.age))
       );
     });
-
     setFilteredData(matched);
   };
 
