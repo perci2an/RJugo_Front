@@ -1,9 +1,11 @@
 {
   "id": "card-0005",
-  "title": "청년 메론",
-  "category": "취업",
-  "location": "서울",
-  "age": "20대",
-  "status": "미취업",
-  "details": "서울시 청년을 위한 최대 200만원 지원 정책입니다."
+  "title": "청년 주거 지원",
+  "description": "청년을 위한 주거비 지원 정책입니다.",
+  "location": ["서울특별시", "경기도", "전라도"],
+  "category": ["주거", "문화/예술"],
+  "age": ["19~24", "25~29", "30~34"],
+  "status": ["구직자", "학생"],
+  "details": "월세 20만원을 최대 1년간 지원합니다.",
+  "image": "/img/CardImage/Policy/5.jpeg"
 }
