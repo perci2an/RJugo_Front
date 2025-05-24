@@ -1,9 +1,20 @@
 import Link from "next/link";
 
-export default function InfoCard({ id, type, title, location, bgImage }) {
+export default function InfoCard({
+  id,
+  type,
+  title,
+  location,
+  category,
+  bgImage,
+}) {
   const locations = Array.isArray(location)
     ? location
     : location?.split(",").map((loc) => loc.trim());
+
+  const categories = Array.isArray(category)
+    ? category
+    : category?.split(",").map((cat) => cat.trim());
 
   return (
     <Link href={`/card/${type}/${id}`}>
@@ -18,7 +29,7 @@ export default function InfoCard({ id, type, title, location, bgImage }) {
           />
         </div>
         <div className="bg-white p-4 flex flex-col justify-between h-2/5 rounded-b-2xl group-hover:bg-[#f5f5f5] transition-colors duration-300">
-          <div className="flex flex-wrap gap-1">
+          <div className="flex flex-wrap gap-1 mb-2">
             {locations?.map((loc, idx) => (
               <span
                 key={idx}
@@ -28,9 +39,16 @@ export default function InfoCard({ id, type, title, location, bgImage }) {
               </span>
             ))}
           </div>
-          <span className="text-sm text-[#2cb67d] mt-2 font-medium group-hover:text-[#7f5af0] transition-colors duration-300">
-            청년들이 최다방문한 정책
-          </span>
+          <div className="flex flex-wrap gap-1">
+            {categories?.map((cat, idx) => (
+              <span
+                key={idx}
+                className="text-sm text-[#2cb67d] font-medium group-hover:text-[#7f5af0] transition-colors duration-300"
+              >
+                #{cat}
+              </span>
+            ))}
+          </div>
           <h4 className="text-base font-semibold mt-1 text-gray-800 truncate">
             {title}
           </h4>

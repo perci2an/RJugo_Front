@@ -37,7 +37,7 @@ export const cardMeta = [
     title: "청년 취업 지원",
     type: "policy",
     description: "청년 취업 촉진을 위한 정책",
-    location: ["서울특별시", "경기도", "충청도", "경상도"],
+    location: ["경기도", "충청도", "경상도"],
     category: ["교육", "일자리", "생활지원"],
     age: ["25~29", "30~34", "35~39"],
     status: ["미취업", "학생", "구직자", "무직"],
