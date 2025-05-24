@@ -17,35 +17,49 @@ export default function Home() {
   });
 
   const [filteredData, setFilteredData] = useState(cardMeta.slice(0, 10));
+  const [lastSearchedFilterEmpty, setLastSearchedFilterEmpty] = useState(true);
+  const [hasSearched, setHasSearched] = useState(false);
 
   const handleSearch = () => {
-    const matched = cardMeta.filter((item) => {
-      const locationMatch =
-        selectedFilters.지역.length === 0 ||
-        selectedFilters.지역.every((val) =>
-          (item.location ?? []).includes(val)
-        );
+    setHasSearched(true);
 
-      const categoryMatch =
-        selectedFilters.분야.length === 0 ||
-        selectedFilters.분야.every((val) =>
-          (item.category ?? []).includes(val)
-        );
+    const isEmptyFilter = Object.values(selectedFilters).every(
+      (arr) => arr.length === 0
+    );
 
-      const statusMatch =
-        selectedFilters.취업상태.length === 0 ||
-        selectedFilters.취업상태.every((val) =>
-          (item.status ?? []).includes(val)
-        );
+    setLastSearchedFilterEmpty(isEmptyFilter);
 
-      const ageMatch =
-        selectedFilters.연령.length === 0 ||
-        selectedFilters.연령.every((val) => (item.age ?? []).includes(val));
+    if (isEmptyFilter) {
+      setFilteredData(cardMeta.slice(0, 10));
+    } else {
+      const matched = cardMeta.filter((item) => {
+        const locationMatch =
+          selectedFilters.지역.length === 0 ||
+          selectedFilters.지역.every((val) =>
+            (item.location ?? []).includes(val)
+          );
 
-      return locationMatch && categoryMatch && statusMatch && ageMatch;
-    });
+        const categoryMatch =
+          selectedFilters.분야.length === 0 ||
+          selectedFilters.분야.every((val) =>
+            (item.category ?? []).includes(val)
+          );
 
-    setFilteredData(matched);
+        const statusMatch =
+          selectedFilters.취업상태.length === 0 ||
+          selectedFilters.취업상태.every((val) =>
+            (item.status ?? []).includes(val)
+          );
+
+        const ageMatch =
+          selectedFilters.연령.length === 0 ||
+          selectedFilters.연령.every((val) => (item.age ?? []).includes(val));
+
+        return locationMatch && categoryMatch && statusMatch && ageMatch;
+      });
+
+      setFilteredData(matched);
+    }
   };
 
   return (
@@ -69,9 +83,10 @@ export default function Home() {
         onSearch={handleSearch}
       />
 
-      <TrendText />
+      {hasSearched && lastSearchedFilterEmpty && <TrendText />}
+      {!hasSearched && <TrendText />}
 
-      <AnimatedOnScroll>
+      <AnimatedOnScroll key={JSON.stringify(filteredData)}>
         <InfoSlide data={filteredData} />
       </AnimatedOnScroll>
     </main>
