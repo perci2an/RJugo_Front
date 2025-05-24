@@ -20,17 +20,31 @@ export default function Home() {
 
   const handleSearch = () => {
     const matched = cardMeta.filter((item) => {
-      return (
-        (selectedFilters.지역.length === 0 ||
-          selectedFilters.지역.includes(item.location)) &&
-        (selectedFilters.분야.length === 0 ||
-          selectedFilters.분야.includes(item.category)) &&
-        (selectedFilters.취업상태.length === 0 ||
-          selectedFilters.취업상태.includes(item.status)) &&
-        (selectedFilters.연령.length === 0 ||
-          selectedFilters.연령.includes(item.age))
-      );
+      const locationMatch =
+        selectedFilters.지역.length === 0 ||
+        selectedFilters.지역.every((val) =>
+          (item.location ?? []).includes(val)
+        );
+
+      const categoryMatch =
+        selectedFilters.분야.length === 0 ||
+        selectedFilters.분야.every((val) =>
+          (item.category ?? []).includes(val)
+        );
+
+      const statusMatch =
+        selectedFilters.취업상태.length === 0 ||
+        selectedFilters.취업상태.every((val) =>
+          (item.status ?? []).includes(val)
+        );
+
+      const ageMatch =
+        selectedFilters.연령.length === 0 ||
+        selectedFilters.연령.every((val) => (item.age ?? []).includes(val));
+
+      return locationMatch && categoryMatch && statusMatch && ageMatch;
     });
+
     setFilteredData(matched);
   };
 
