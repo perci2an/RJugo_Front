@@ -92,8 +92,9 @@ export default function Home() {
           </AnimatedOnScroll>
         </>
       ) : (
-        // 필터가 적용된 검색 결과일 때는 무한 스크롤 리스트 컴포넌트 (예: InfoGrid)
-        <InfoGrid data={filteredData} />
+        <AnimatedOnScroll key={JSON.stringify(filteredData)}>
+          <InfoGrid data={filteredData} />
+        </AnimatedOnScroll>
       )}
     </main>
   );

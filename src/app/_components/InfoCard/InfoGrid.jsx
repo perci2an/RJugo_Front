@@ -35,7 +35,7 @@ export default function InfoGrid({ data }) {
   }, [data]);
 
   return (
-    <div className="px-10 py-12 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 place-items-center">
+    <div className="w-[1300px] px-10 py-12 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-3 gap-12 place-items-center mx-auto">
       {data.slice(0, visibleItems).map((item, idx) => (
         <InfoCard key={idx} {...item} />
       ))}
