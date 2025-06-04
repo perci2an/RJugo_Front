@@ -1,0 +1,11 @@
+{
+  "id": "card-0010",
+  "title": "청년 주거 지원",
+  "description": "청년을 위한 주거비 지원 정책입니다.",
+  "location": "서울특별시",
+  "category": "주거",
+  "age": "19~24",
+  "status": ["미취업", "학생", "구직자", "무직"],
+  "details": "월세 20만원을 최대 1년간 지원합니다.",
+  "image": "/img/CardImage/Policy/10.jpeg"
+}
