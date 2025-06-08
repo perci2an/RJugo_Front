@@ -1,62 +1,65 @@
+"use client";
+
+import { useState } from "react";
 import FinanceFilterBar from "../../_components/CustomFilter/FinanceFilterBar";
 import AnimatedText from "../../_components/AnimatedText";
 import TrendText from "../../_components/TrendText";
 import InfoSlide from "../../_components/InfoCard/InfoSlider";
+import InfoGrid from "../../_components/InfoCard/InfoGrid";
 import AnimatedOnScroll from "../../_components/AnimatedOnScroll";
+import { cardMeta } from "../../_data/finance-meta";
 
 export default function Home() {
-  const financeData = [
-    {
-      title: "서민금융 종합플랫폼 잇다",
-      location: "서울시",
-      bgImage: "/img/CardImage/Finance/1.jpeg",
-    },
-    {
-      title: "청년도약계좌 기여금 확대",
-      location: "부산시",
-      bgImage: "/img/CardImage/Finance/2.jpeg",
-    },
-    {
-      title: "포용이의 홀로서기: 대출상품 알아보기",
-      location: "부산시",
-      bgImage: "/img/CardImage/Finance/5.png",
-    },
-    {
-      title: "온라인 금융교육 이벤트",
-      location: "부산시",
-      bgImage: "/img/CardImage/Finance/4.png",
-    },
-    {
-      title: "금융지주회사법·시행령 개정안 입법예고",
-      location: "부산시",
-      bgImage: "/img/CardImage/Finance/3.jpeg",
-    },
-    {
-      title: "금융만화: 나는 연채맨이야!",
-      location: "부산시",
-      bgImage: "/img/CardImage/Finance/6.png",
-    },
-    {
-      title: "서울 동아리: 시정 가치 연계 사회기여 활동",
-      location: "부산시",
-      bgImage: "/img/CardImage/Finance/7.png",
-    },
-    {
-      title: "온라인 예금중계 서비스",
-      location: "부산시",
-      bgImage: "/img/CardImage/Finance/8.jpeg",
-    },
-    {
-      title: "서민금융생활상담: 금융소비자보호법",
-      location: "부산시",
-      bgImage: "/img/CardImage/Finance/9.png",
-    },
-    {
-      title: "온택트 공개교육",
-      location: "부산시",
-      bgImage: "/img/CardImage/Finance/10.png",
-    },
-  ];
+  const [selectedFilters, setSelectedFilters] = useState({
+    은행: [],
+    금리: [],
+    가입기간: [],
+    최소금액: [],
+  });
+
+  const [filteredData, setFilteredData] = useState(cardMeta.slice(0, 10));
+  const [lastSearchedFilterEmpty, setLastSearchedFilterEmpty] = useState(true);
+  const [hasSearched, setHasSearched] = useState(false);
+
+  const handleSearch = () => {
+    setHasSearched(true);
+
+    const isEmptyFilter = Object.values(selectedFilters).every(
+      (arr) => arr.length === 0
+    );
+
+    setLastSearchedFilterEmpty(isEmptyFilter);
+
+    if (isEmptyFilter) {
+      setFilteredData(cardMeta.slice(0, 10));
+    } else {
+      const matched = cardMeta.filter((item) => {
+        const bankMatch =
+          selectedFilters.은행.length === 0 ||
+          selectedFilters.은행.every((val) => (item.bank ?? []).includes(val));
+
+        const rateMatch =
+          selectedFilters.금리.length === 0 ||
+          selectedFilters.금리.every((val) => (item.rate ?? []).includes(val));
+
+        const periodMatch =
+          selectedFilters.가입기간.length === 0 ||
+          selectedFilters.가입기간.every((val) =>
+            (item.period ?? []).includes(val)
+          );
+
+        const amountMatch =
+          selectedFilters.최소금액.length === 0 ||
+          selectedFilters.최소금액.every((val) =>
+            (item.amount ?? []).includes(val)
+          );
+
+        return bankMatch && rateMatch && periodMatch && amountMatch;
+      });
+
+      setFilteredData(matched);
+    }
+  };
 
   return (
     <main>
@@ -73,12 +76,24 @@ export default function Home() {
         />
       </div>
 
-      <FinanceFilterBar />
-      <TrendText />
+      <FinanceFilterBar
+        selectedFilters={selectedFilters}
+        setSelectedFilters={setSelectedFilters}
+        onSearch={handleSearch}
+      />
 
-      <AnimatedOnScroll>
-        <InfoSlide data={financeData} />
-      </AnimatedOnScroll>
+      {!hasSearched || lastSearchedFilterEmpty ? (
+        <>
+          <TrendText />
+          <AnimatedOnScroll key={JSON.stringify(filteredData)}>
+            <InfoSlide data={filteredData} />
+          </AnimatedOnScroll>
+        </>
+      ) : (
+        <AnimatedOnScroll key={JSON.stringify(filteredData)}>
+          <InfoGrid data={filteredData} />
+        </AnimatedOnScroll>
+      )}
     </main>
   );
 }
