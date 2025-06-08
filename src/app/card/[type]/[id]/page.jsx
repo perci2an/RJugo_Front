@@ -47,6 +47,26 @@ export default async function CardDetailPage({ params }) {
   const jsonData = fs.readFileSync(filePath, "utf8");
   const card = JSON.parse(jsonData);
 
+  // 필드 매핑: 정책 or 금융 구분해서 레이블 출력
+  const fields = [
+    {
+      label: type === "finance" ? "🏦 은행" : "📍 지역",
+      value: card.bank ?? card.location ?? "정보 없음",
+    },
+    {
+      label: type === "finance" ? "💰 금리" : "🗂️ 분야",
+      value: card.rate ?? card.category ?? "정보 없음",
+    },
+    {
+      label: type === "finance" ? "⏳ 가입기간" : "👤 연령",
+      value: card.period ?? card.age ?? "정보 없음",
+    },
+    {
+      label: type === "finance" ? "💵 최소금액" : "👍 추천 상대",
+      value: card.amount ?? card.status ?? "정보 없음",
+    },
+  ];
+
   return (
     <div className="p-6 max-w-2xl mx-auto">
       {card.image && (
@@ -58,26 +78,13 @@ export default async function CardDetailPage({ params }) {
       )}
       <h1 className="text-3xl font-bold mb-4">{card.title}</h1>
       <p className="text-gray-700 mb-6">{card.description}</p>
+
       <div className="text-sm text-gray-500 space-y-1">
-        <p>
-          📍 지역:{" "}
-          {Array.isArray(card.location)
-            ? card.location.join(", ")
-            : card.location}
-        </p>
-        <p>
-          🗂️ 분야:{" "}
-          {Array.isArray(card.category)
-            ? card.category.join(", ")
-            : card.category}
-        </p>
-        <p>
-          👤 연령: {Array.isArray(card.age) ? card.age.join(", ") : card.age}
-        </p>
-        <p>
-          👍 추천 상대:{" "}
-          {Array.isArray(card.status) ? card.status.join(", ") : card.status}
-        </p>
+        {fields.map(({ label, value }, index) => (
+          <p key={index}>
+            {label}: {Array.isArray(value) ? value.join(", ") : value}
+          </p>
+        ))}
         <p>내용: {card.details}</p>
       </div>
     </div>
