@@ -17,19 +17,21 @@ const financeFilterConfig = {
   ],
 };
 
-export default function FinanceFilterBar() {
-  const [showFilters, setShowFilters] = useState(false);
-  const inputRef = useRef(null);
-
-  const [selected, setSelected] = useState({
+export default function financeFilterBar({
+  selectedFilters = {
     은행: [],
     금리: [],
     가입기간: [],
     최소금액: [],
-  });
+  },
+  setSelectedFilters,
+  onSearch,
+}) {
+  const [showFilters, setShowFilters] = useState(false);
+  const inputRef = useRef(null);
 
   const toggleSelection = (section, value) => {
-    setSelected((prev) => ({
+    setSelectedFilters((prev) => ({
       ...prev,
       [section]: prev[section].includes(value)
         ? prev[section].filter((v) => v !== value)
@@ -37,8 +39,13 @@ export default function FinanceFilterBar() {
     }));
   };
 
+  const handleSearchClick = () => {
+    setShowFilters(false);
+    if (onSearch) onSearch();
+  };
+
   const removeTag = (section, value) => {
-    setSelected((prev) => ({
+    setSelectedFilters((prev) => ({
       ...prev,
       [section]: prev[section].filter((v) => v !== value),
     }));
@@ -54,13 +61,13 @@ export default function FinanceFilterBar() {
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
-  const selectedCount = Object.values(selected).flat().length;
+  const selectedCount = Object.values(selectedFilters ?? {}).flat().length;
 
   return (
     <div className="relative w-full max-w-4xl mx-auto mt-20" ref={inputRef}>
       <div className="bg-white shadow-md border border-gray-300 rounded-xl flex items-center w-full px-0 py-0 overflow-hidden">
         <div className="flex items-center gap-2 px-6 py-4 bg-[#4A5353] text-white font-semibold text-base rounded-l-xl">
-          맞춤형 금융검색 <BookOpen className="w-4 h-4 text-[#E2C044]" />
+          맞춤형 정책검색 <BookOpen className="w-4 h-4 text-[#E2C044]" />
         </div>
 
         <div
@@ -70,7 +77,7 @@ export default function FinanceFilterBar() {
           {selectedCount === 0 ? (
             <span className="text-gray-400 text-base">필터를 선택해주세요</span>
           ) : (
-            Object.entries(selected).map(([section, items]) =>
+            Object.entries(selectedFilters).map(([section, items]) =>
               items.map((item) => (
                 <span
                   key={`${section}-${item}`}
@@ -91,10 +98,13 @@ export default function FinanceFilterBar() {
           )}
         </div>
 
-        <div className="flex items-center gap-2 px-6 py-4 bg-[#4A5353] text-white font-semibold text-base rounded-r-xl hover:bg-gray-700">
+        <button
+          className="flex items-center gap-2 px-6 py-4 bg-[#4A5353] text-white font-semibold text-base rounded-r-xl hover:bg-gray-700"
+          onClick={handleSearchClick}
+        >
           <Search className="w-4 h-4 text-[#E2C044]" />
           검색
-        </div>
+        </button>
       </div>
 
       {showFilters && (
@@ -104,7 +114,7 @@ export default function FinanceFilterBar() {
               key={section}
               title={section}
               options={options}
-              selected={selected[section]}
+              selected={selectedFilters?.[section] ?? []}
               onToggle={(value) => toggleSelection(section, value)}
             />
           ))}
