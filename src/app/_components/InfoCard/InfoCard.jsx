@@ -6,15 +6,19 @@ export default function InfoCard({
   title,
   location,
   category,
+  bank,
+  period,
   bgImage,
 }) {
-  const locations = Array.isArray(location)
-    ? location
-    : location?.split(",").map((loc) => loc.trim());
+  const locationSource = location ?? bank;
+  const locations = Array.isArray(locationSource)
+    ? locationSource
+    : locationSource?.split(",").map((loc) => loc.trim());
 
-  const categories = Array.isArray(category)
-    ? category
-    : category?.split(",").map((cat) => cat.trim());
+  const categorySource = category ?? period;
+  const categories = Array.isArray(categorySource)
+    ? categorySource
+    : categorySource?.split(",").map((cat) => cat.trim());
 
   return (
     <Link href={`/card/${type}/${id}`}>
