@@ -1,9 +1,9 @@
 {
-  "id": "card-0001",
-  "title": "[금융위원회] 서민금융 종합플랫폼 잇다",
+  "id": "card-0004",
+  "title": "[서민금융진흥원] 온라인 금융교육 이벤트",
   "description": "청년을 위한 주거비 지원 정책입니다.",
   "bank": "정보 한 입",
-  "rate": "기본 금리",
+  "rate": ["기본 금리", "최고 금리"],
   "period": ["1개월", "3개월", "6개월", "1년", "1년 이상"],
   "amount": [
     "만원 미만",
@@ -13,5 +13,5 @@
     "100만원 초과"
   ],
   "details": "월세 20만원을 최대 1년간 지원합니다.",
-  "image": "/img/CardImage/Finance/1.jpeg"
+  "image": "/img/CardImage/Finance/4.jpeg"
 }
