@@ -17,7 +17,7 @@ const financeFilterConfig = {
   ],
 };
 
-export default function financeFilterBar({
+export default function FinanceFilterBar({
   selectedFilters = {
     은행: [],
     금리: [],
