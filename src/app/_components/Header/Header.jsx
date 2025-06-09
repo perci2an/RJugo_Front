@@ -23,8 +23,8 @@ export default function Header() {
   }, []);
 
   const getMenuComponent = () => {
-    if (pathname.startsWith("/finance")) return <FinanceMenu />;
-    if (pathname.startsWith("/policy")) return <PolicyMenu />;
+    if (pathname.includes("finance")) return <FinanceMenu />;
+    if (pathname.includes("policy")) return <PolicyMenu />;
     return null;
   };
 
