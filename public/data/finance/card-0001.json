@@ -1,7 +1,7 @@
 {
   "id": "card-0001",
   "title": "[금융위원회] 서민금융 종합플랫폼 잇다",
-  "description": "청년을 위한 주거비 지원 정책입니다.",
+  "description": "복잡한 금융상품, 이제 한 곳에서 확인하고 맞춤형 정보를 받아보세요.",
   "bank": "정보 한 입",
   "rate": "기본 금리",
   "period": ["1개월", "3개월", "6개월", "1년", "1년 이상"],
@@ -12,6 +12,6 @@
     "50만원 ~ 100만원",
     "100만원 초과"
   ],
-  "details": "월세 20만원을 최대 1년간 지원합니다.",
+  "details": "<div style='font-family: \"Noto Sans KR\", sans-serif; max-width: 800px; margin: 20px auto; line-height: 1.7;'>\n  <section style='margin-bottom: 2.5rem;'>\n    <h3 style='font-size: 1.4rem; margin-bottom: 1rem;'>서비스 개요 🧭</h3>\n    <p>‘잇다’는 금융위원회가 운영하는 서민금융 종합 플랫폼으로, 다양한 금융상품을 한 곳에서 비교하고 신청할 수 있는 맞춤형 정보 서비스입니다.</p>\n  </section>\n\n  <section style='margin-bottom: 2.5rem;'>\n    <h3 style='font-size: 1.4rem; margin-bottom: 1rem;'>주요 기능 🔍</h3>\n    <ul style='list-style-type: disc; margin-left: 1.2rem;'>\n      <li>저금리 대출 상품 비교 및 추천</li>\n      <li>신용회복 및 채무조정 서비스 연계</li>\n      <li>정부지원 금융정책 자동 분석 제공</li>\n      <li>청년·중장년·노년층 대상 맞춤형 금융 정보 안내</li>\n    </ul>\n  </section>\n\n  <section style='margin-bottom: 2.5rem;'>\n    <h3 style='font-size: 1.4rem; margin-bottom: 1rem;'>대상자 안내 👤</h3>\n    <ul style='list-style-type: disc; margin-left: 1.2rem;'>\n      <li>서민, 저신용자, 사회 초년생, 청년 등 금융취약계층</li>\n      <li>대출 이력이 적거나 신용점수가 낮아 일반 금융 접근이 어려운 분</li>\n    </ul>\n  </section>\n\n  <section style='margin-bottom: 2.5rem;'>\n    <h3 style='font-size: 1.4rem; margin-bottom: 1rem;'>이용 방법 🛠️</h3>\n    <ol style='margin-left: 1.2rem;'>\n      <li>‘잇다’ 공식 홈페이지 접속 (www.itsa.or.kr)</li>\n      <li>맞춤형 금융정보 메뉴 선택</li>\n      <li>개인 정보 입력 후 추천 서비스 확인</li>\n    </ol>\n  </section>\n\n  <section style='margin-bottom: 2.5rem;'>\n    <h3 style='font-size: 1.4rem; margin-bottom: 1rem;'>기대 효과 💡</h3>\n    <ul style='list-style-type: disc; margin-left: 1.2rem;'>\n      <li>금융 사각지대 해소 및 정보 격차 축소</li>\n      <li>서민층의 합리적 금융 선택 지원</li>\n      <li>복잡한 금융제도에 대한 접근성 향상</li>\n    </ul>\n  </section>\n\n  <section style='font-size: 1.1rem;'>\n    문의: 1800-1234 | 홈페이지: www.itsa.or.kr\n  </section>\n</div>",
   "image": "/img/CardImage/Finance/1.jpeg"
 }

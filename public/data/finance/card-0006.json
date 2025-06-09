@@ -1,7 +1,7 @@
 {
   "id": "card-0006",
   "title": "[금융지식] 연체가 뭘 의미하는 줄 알아?",
-  "description": "청년을 위한 주거비 지원 정책입니다.",
+  "description": "금융 거래에서 연체가 갖는 의미와 연체 시 발생할 수 있는 불이익에 대해 쉽게 설명합니다.",
   "bank": "정보 한 입",
   "rate": ["기본 금리", "최고 금리"],
   "period": ["1개월", "3개월", "6개월", "1년", "1년 이상"],
@@ -12,6 +12,6 @@
     "50만원 ~ 100만원",
     "100만원 초과"
   ],
-  "details": "월세 20만원을 최대 1년간 지원합니다.",
+  "details": "<div style='font-family: \"Noto Sans KR\", sans-serif; max-width: 800px; margin: 20px auto; line-height: 1.7;'>\n  <section style='margin-bottom: 2.5rem;'>\n    <h3 style='font-size: 1.4rem; margin-bottom: 1rem;'>연체란? ⏰</h3>\n    <p>연체란 금융 상품의 원금이나 이자를 정해진 기한 내에 납부하지 못하는 상태를 의미합니다. 이는 개인 신용에 직접적인 영향을 미쳐, 신용점수 하락 및 향후 금융 거래에 제약을 줄 수 있습니다.</p>\n  </section>\n\n  <section style='margin-bottom: 2.5rem;'>\n    <h3 style='font-size: 1.4rem; margin-bottom: 1rem;'>연체 시 발생하는 불이익 ⚠️</h3>\n    <ul style='list-style-type: disc; margin-left: 1.2rem;'>\n      <li>신용점수 하락으로 대출 한도 축소</li>\n      <li>연체이자 추가 부담</li>\n      <li>금융기관의 서비스 제한</li>\n      <li>추가 채무 독촉 및 법적 조치 가능성</li>\n    </ul>\n  </section>\n\n  <section style='margin-bottom: 2.5rem;'>\n    <h3 style='font-size: 1.4rem; margin-bottom: 1rem;'>연체 예방 방법 💡</h3>\n    <ul style='list-style-type: disc; margin-left: 1.2rem;'>\n      <li>납부일자 알림 설정</li>\n      <li>자동 이체 서비스 활용</li>\n      <li>재정 계획 수립 및 예산 관리</li>\n      <li>금융기관 상담 및 지원 프로그램 활용</li>\n    </ul>\n  </section>\n\n  <section style='font-size: 1.1rem;'>\n    문의: 02-3456-7890 | 홈페이지: www.financial-edu.kr\n  </section>\n</div>",
   "image": "/img/CardImage/Finance/6.jpeg"
 }

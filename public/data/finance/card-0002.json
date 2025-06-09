@@ -1,7 +1,7 @@
 {
   "id": "card-0002",
   "title": "청년도약계좌 기여금 확대",
-  "description": "청년을 위한 주거비 지원 정책입니다.",
+  "description": "정부 기여금이 더해져 더 빨리 목돈을 모을 수 있는 청년 전용 장기저축계좌!",
   "bank": "정보 한 입",
   "rate": ["기본 금리", "최고 금리"],
   "period": ["1개월", "3개월", "6개월", "1년", "1년 이상"],
@@ -12,6 +12,6 @@
     "50만원 ~ 100만원",
     "100만원 초과"
   ],
-  "details": "월세 20만원을 최대 1년간 지원합니다.",
+  "details": "<div style='font-family: \"Noto Sans KR\", sans-serif; max-width: 800px; margin: 20px auto; line-height: 1.7;'>\n  <section style='margin-bottom: 2.5rem;'>\n    <h3 style='font-size: 1.4rem; margin-bottom: 1rem;'>상품 개요 💰</h3>\n    <p>청년도약계좌는 근로·사업소득이 있는 청년이 매월 일정 금액을 납입하면 정부가 기여금을 함께 지원하는 장기저축 상품입니다.</p>\n    <p>2024년부터는 정부 기여금이 확대되어 저소득층 청년일수록 더 큰 혜택을 받을 수 있습니다.</p>\n  </section>\n\n  <section style='margin-bottom: 2.5rem;'>\n    <h3 style='font-size: 1.4rem; margin-bottom: 1rem;'>지원 내용 📌</h3>\n    <ul style='list-style-type: disc; margin-left: 1.2rem;'>\n      <li>정부 기여금 최대 월 40만원까지 지원</li>\n      <li>10년 납입 시 최대 5,000만원 이상 자산 형성 가능</li>\n      <li>비과세 혜택 및 금리 우대</li>\n    </ul>\n  </section>\n\n  <section style='margin-bottom: 2.5rem;'>\n    <h3 style='font-size: 1.4rem; margin-bottom: 1rem;'>가입 대상 👥</h3>\n    <ul style='list-style-type: disc; margin-left: 1.2rem;'>\n      <li>만 19세 ~ 34세 청년</li>\n      <li>개인소득 4,800만원 이하 또는 가구소득 중위 180% 이하</li>\n      <li>근로 또는 사업소득 있는 청년</li>\n    </ul>\n  </section>\n\n  <section style='margin-bottom: 2.5rem;'>\n    <h3 style='font-size: 1.4rem; margin-bottom: 1rem;'>가입 방법 📝</h3>\n    <ol style='margin-left: 1.2rem;'>\n      <li>청년도약계좌 가입 가능 은행 방문 또는 온라인 신청</li>\n      <li>소득 및 연령 요건 확인 후 계좌 개설</li>\n      <li>매월 일정 금액 자동 납입 설정</li>\n    </ol>\n  </section>\n\n  <section style='margin-bottom: 2.5rem;'>\n    <h3 style='font-size: 1.4rem; margin-bottom: 1rem;'>기대 효과 🌱</h3>\n    <ul style='list-style-type: disc; margin-left: 1.2rem;'>\n      <li>청년의 중장기 자산 형성 지원</li>\n      <li>정부와 함께 목돈 마련 가능</li>\n      <li>주거·결혼·창업 등 미래 설계에 도움</li>\n    </ul>\n  </section>\n\n  <section style='font-size: 1.1rem;'>\n    문의: 1397 (서민금융콜센터) | 금융위 홈페이지: www.fsc.go.kr\n  </section>\n</div>",
   "image": "/img/CardImage/Finance/2.jpeg"
 }

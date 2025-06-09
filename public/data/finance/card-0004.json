@@ -1,7 +1,7 @@
 {
   "id": "card-0004",
   "title": "[서민금융진흥원] 온라인 금융교육 이벤트",
-  "description": "청년을 위한 주거비 지원 정책입니다.",
+  "description": "청년과 금융 취약계층을 위한 실시간 온라인 금융교육 이벤트를 소개합니다.",
   "bank": "정보 한 입",
   "rate": ["기본 금리", "최고 금리"],
   "period": ["1개월", "3개월", "6개월", "1년", "1년 이상"],
@@ -12,6 +12,6 @@
     "50만원 ~ 100만원",
     "100만원 초과"
   ],
-  "details": "월세 20만원을 최대 1년간 지원합니다.",
+  "details": "<div style='font-family: \"Noto Sans KR\", sans-serif; max-width: 800px; margin: 20px auto; line-height: 1.7;'>\n  <section style='margin-bottom: 2.5rem;'>\n    <h3 style='font-size: 1.4rem; margin-bottom: 1rem;'>행사 개요 🎓</h3>\n    <p>서민금융진흥원이 주최하는 이번 온라인 금융교육 이벤트는 청년 및 금융 취약계층을 대상으로 실시간 강의와 질의응답을 제공하여 금융 이해력을 높이는 데 목적이 있습니다.</p>\n  </section>\n\n  <section style='margin-bottom: 2.5rem;'>\n    <h3 style='font-size: 1.4rem; margin-bottom: 1rem;'>주요 내용 📚</h3>\n    <ul style='list-style-type: disc; margin-left: 1.2rem;'>\n      <li>재무관리 및 예산 편성 기초 교육</li>\n      <li>신용관리 및 신용점수 향상 방법</li>\n      <li>맞춤형 저금리 대출 상품 소개</li>\n      <li>부채 관리 및 상환 계획 수립</li>\n      <li>금융사기 예방 및 대응법 안내</li>\n    </ul>\n  </section>\n\n  <section style='margin-bottom: 2.5rem;'>\n    <h3 style='font-size: 1.4rem; margin-bottom: 1rem;'>참여 방법 🖥️</h3>\n    <ol style='margin-left: 1.2rem;'>\n      <li>서민금융진흥원 공식 홈페이지 접속</li>\n      <li>온라인 금융교육 이벤트 페이지에서 신청서 작성</li>\n      <li>이메일로 발송되는 참여 링크를 통해 실시간 강의 접속</li>\n    </ol>\n  </section>\n\n  <section style='margin-bottom: 2.5rem;'>\n    <h3 style='font-size: 1.4rem; margin-bottom: 1rem;'>기대 효과 🌱</h3>\n    <ul style='list-style-type: disc; margin-left: 1.2rem;'>\n      <li>금융 이해도 향상과 건강한 재무 습관 형성</li>\n      <li>청년층 및 취약계층의 금융 접근성 확대</li>\n      <li>경제적 자립 기반 마련</li>\n    </ul>\n  </section>\n\n  <section style='font-size: 1.1rem;'>\n    문의: 02-987-6543 | 홈페이지: www.sunfin.or.kr\n  </section>\n</div>",
   "image": "/img/CardImage/Finance/4.jpeg"
 }
