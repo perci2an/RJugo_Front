@@ -1,10 +1,10 @@
 {
   "id": "card-0006",
-  "title": "청년 주거 지원",
+  "title": "2024 청년인생설계학교",
   "description": "청년을 위한 주거비 지원 정책입니다.",
   "location": ["강원도", "충청도", "경기도"],
-  "category": ["주거", "문화/예술"],
-  "age": "25~29",
+  "category": "대외활동",
+  "age": ["19~24", "25~29"],
   "status": ["미취업", "학생"],
   "details": "월세 20만원을 최대 1년간 지원합니다.",
   "image": "/img/CardImage/Policy/6.jpeg"

@@ -1,11 +1,11 @@
 {
   "id": "card-0007",
-  "title": "청년 주거 지원",
+  "title": "2025 마포 청년정책 네트워크 신규위원 모집",
   "description": "청년을 위한 주거비 지원 정책입니다.",
   "location": "서울특별시",
-  "category": ["주거", "일자리", "교육"],
+  "category": ["주거", "교육"],
   "age": "30~34",
-  "status": ["재직자", "학생"],
+  "status": ["구직자", "무직"],
   "details": "월세 20만원을 최대 1년간 지원합니다.",
   "image": "/img/CardImage/Policy/7.jpeg"
 }

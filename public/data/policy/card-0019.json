@@ -1,11 +1,11 @@
 {
   "id": "card-0019",
-  "title": "청년 주거 지원",
+  "title": "[울산광역시 동구] 청년스테이지 ON",
   "description": "청년을 위한 주거비 지원 정책입니다.",
-  "location": "서울특별시",
-  "category": "주거",
-  "age": "19~24",
-  "status": ["미취업", "학생", "구직자", "무직"],
+  "location": "경상도",
+  "category": ["문화/예술", "대외활동"],
+  "age": ["19~24", "25~29"],
+  "status": ["학생", "무직"],
   "details": "월세 20만원을 최대 1년간 지원합니다.",
   "image": "/img/CardImage/Policy/19.jpeg"
 }
